@@ -1,0 +1,252 @@
+<!-- header starts  -->
+<header
+  *ngIf="showHeader"
+  class="header d-flex justify-content-between align-items-center px-3"
+>
+  <div class="logo m-2">
+    <img
+      src="/assets/logo-white.png"
+      alt="Logo"
+      class="logo-img"
+      width="200"
+      height="100"
+    />
+  </div>
+  <nav>
+    <button
+      class="toggle-icon"
+      type="button"
+      aria-label="Toggle Navigation"
+      (click)="toggleSidebar()"
+    >
+    <span *ngIf="!isSidebarOpen" class="open-icon"></span>
+    <!-- <span *ngIf="isSidebarOpen" class="close-icon"></span> -->
+    </button>
+  </nav>
+</header>
+<!-- header ends  -->
+
+<!--  Header // -->
+<div class="sidebar" [class.open]="isSidebarOpen">
+  <button *ngIf="isSidebarOpen" class="close-icon" (click)="toggleSidebar()"></button>
+  <div class="sidebar-content">
+    <ul class="sidebar-list">
+      <li>
+        <a href="javascript:void(0)" (click)="scrollToSection('home')">HOME</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" (click)="scrollToSection('about')"
+          >ABOUT</a
+        >
+      </li>
+      <li>
+        <a href="javascript:void(0)" (click)="scrollToSection('services')"
+          >SERVICES</a
+        >
+      </li>
+      <li>
+        <a href="javascript:void(0)" (click)="scrollToSection('why-we')"
+          >WHY US</a
+        >
+      </li>
+      <li>
+        <a href="javascript:void(0)" (click)="scrollToSection('footer')"
+          >CONTACT US</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <!-- Footer Text -->
+  <div class="sidebar-footer">
+    <p>© 2025 Your Company. All rights reserved.</p>
+  </div>
+</div>
+<!-- header ends  -->
+
+<!-- home starts -->
+<div class="home-section" id="home" #homeSection>
+  <img src="/assets/home.gif" alt="Loading" class="img-fluid" />
+</div>
+<!-- home ends -->
+
+<div id="layout" #layout>
+  <!-- about starts -->
+  <div id="about" class="section bg-black about-section" #aboutSection>
+    <div class="container">
+      <div class="row">
+        <!-- Left Side: Image -->
+        <div class="col-md-7 text-start text-md-left about-text">
+          <h1
+            #animatedHeading
+            class="display-4 main-text-color mb-4 animated-heading"
+          >
+            YOUR BRAND IN <br />
+            MOMENTS THAT <br />
+            MATTER.
+          </h1>
+          <p #animatedParagraph class="lead animated-paragraph">
+            We blend creativity, technology & data to help brands <br />
+            walk through walls
+          </p>
+        </div>
+        <!-- Right Side: Text -->
+        <div class="col-md-5">
+          <img
+            src="/assets/about-3d.png"
+            alt="About Image"
+            class="animated-image"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- about ends -->
+
+  <!-- Why We starts -->
+  <div id="why-we" class="section bg-black why-us-section" #whyWeSection>
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Side: Image -->
+        <div class="col-md-4">
+          <img
+            src="/assets/about-3d.png"
+            alt="About Image"
+            class="animated-image"
+          />
+        </div>
+        <!-- Right Side: Text -->
+        <div class="col-md-8 text-end text-md-right">
+          <h1 class="display-4 main-text-color mb-4">
+            YOUR BRAND IN <br />
+            MOMENTS THAT <br />
+            MATTER.
+          </h1>
+          <p class="lead">
+            We blend creativity, technology & data to help brands <br />
+            walk through walls
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Why We ends -->
+
+  <!-- services starts-->
+  <div id="services" class="section bg-black text-dark" #servicesSection>
+    <div class="container py-5">
+      <div class="row">
+        <!-- Service 1 -->
+        <div class="col-md-4">
+          <div class="card service-card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-8 text-start">
+                  <h5 class="card-title">Service 1</h5>
+                </div>
+                <div class="col-4 text-end">
+                  <img
+                    src="/assets/apple.png"
+                    alt="Service 1"
+                    class="service-img"
+                  />
+                </div>
+              </div>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                nec odio. Praesent libero.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="col-md-4">
+          <div class="card service-card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-8 text-start">
+                  <h5 class="card-title">Service 2</h5>
+                </div>
+                <div class="col-4 text-end">
+                  <img
+                    src="/assets/apple.png"
+                    alt="Service 2"
+                    class="service-img"
+                  />
+                </div>
+              </div>
+              <p class="card-text">
+                Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh
+                elementum imperdiet.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-md-4">
+          <div class="card service-card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-8 text-start">
+                  <h5 class="card-title">Service 3</h5>
+                </div>
+                <div class="col-4 text-end">
+                  <img
+                    src="/assets/apple.png"
+                    alt="Service 3"
+                    class="service-img"
+                  />
+                </div>
+              </div>
+              <p class="card-text">
+                Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue
+                semper porta. Mauris massa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- services ends -->
+
+  <!-- footer starts -->
+  <footer class="section bg-black text-white py-4" #footerSection id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <p>Email: contact&#64;yourbrand.com</p>
+          <p>Phone: +1 234 567 890</p>
+          <p>Address: 123 Your Street, City, Country</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#about" class="text-white">About Us</a></li>
+            <li><a href="#services" class="text-white">Our Services</a></li>
+            <li><a href="#why-we" class="text-white">Why Choose Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Follow Us</h5>
+          <a href="#" class="text-white me-3"
+            ><i class="fab fa-facebook"></i> Facebook</a
+          >
+          <a href="#" class="text-white me-3"
+            ><i class="fab fa-twitter"></i> Twitter</a
+          >
+          <a href="#" class="text-white"
+            ><i class="fab fa-instagram"></i> Instagram</a
+          >
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <p class="mb-0">&copy; 2025 Your Brand. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!--  footer ends -->
+</div>

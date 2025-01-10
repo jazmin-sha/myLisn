@@ -1,0 +1,359 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+p {
+  --bs-text-opacity: 1;
+  color: rgb(203 185 171) !important;
+}
+
+.section {
+  height: 100vh !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-dark {
+  background-color: #000000;
+  color: white;
+}
+
+.bg-light {
+  background-color: #000000;
+  color: black;
+}
+
+.bg-dark {
+  background-color: #343a40;
+  color: white;
+}
+
+.navbar-toggler-icon {
+  font-size: 50px;
+}
+
+.main-text-color {
+  color: #ffffff;
+}
+
+.section-height {
+  height: 82vh;
+}
+
+.app-container {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  flex: 1;
+  padding: 16px;
+}
+
+/* Header Styling */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15vh;
+  background-color: black;
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Logo Styling */
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+/* Navbar Icon Styling */
+.navbar-toggler {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  width: auto;
+  height: auto;
+  background: #333;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  justify-content: space-between; /* Space between elements */
+  padding: 20px;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  background: #444;
+}
+
+/* Sidebar List Styling */
+.sidebar-list {
+  list-style-type: none;
+  padding: 60px;
+  margin: 0;
+  font-size: 50px; /* Increased font size */
+}
+
+.sidebar-list li {
+  margin: 15px 0; /* Increased spacing */
+}
+
+.sidebar-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 28px; /* Increased font size for links */
+  transition: background 0.3s, font-size 0.3s;
+}
+
+.sidebar-list a:hover {
+  background: #555;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.sidebar-content {
+  flex: 1;
+  display: flex;
+  align-items: center; /* Align to middle vertically */
+}
+
+.sidebar-footer {
+  text-align: right; /* Align text to the right */
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* Close Icon (Single Square) */
+.close-icon {
+  position: absolute; /* Ensure it stays in the top-right corner */
+  top: 10px;
+  right: 10px;
+  margin: 0;
+  cursor: pointer !important;
+  border: none;
+  color: #fff;
+  background: transparent;
+  font-size: 30px;
+}
+
+/* Toggle Icon Styling */
+.toggle-icon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.toggle-icon:hover {
+  color: #007bff;
+}
+
+/* Open Icon (4 Squares) */
+.open-icon {
+  display: grid;
+  grid-template-columns: repeat(2, 20px); /* Two columns of squares */
+  grid-template-rows: repeat(2, 20px); /* Two rows of squares */
+  grid-gap: 4px; /* Spacing between squares */
+  width: 48px;  /* Adjust width for 2x2 grid */
+  height: 48px; /* Adjust height for 2x2 grid */
+  position: fixed;
+  top: 42px;
+  right: 34px;
+  cursor: pointer;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.open-icon::before,
+.open-icon::after,
+.open-icon span,
+.open-icon div {
+  content: '';
+  display: block;
+  width: 20px; /* Square width */
+  height: 20px; /* Square height */
+  background-color: rgb(240, 240, 240); /* Square color */
+}
+
+.open-icon::before,
+.open-icon::after {
+  background-color: white; /* Ensure pseudo-elements are also white */
+}
+
+/* Close Icon (Single Square) */
+.close-icon {
+  width: 28px;
+  height: 28px;
+  background-color: rgb(255, 255, 255); /* Change to your desired color */
+  display: block;
+}
+
+/* home section */
+.home-section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
+  font-family: "lovesPro", sans-serif;
+}
+
+/* about section */
+.about-section,
+.why-us-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-section img,
+.why-us-section img {
+  width: 420px;
+  height: auto;
+}
+
+/* service section */
+.service-card {
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.service-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-8 {
+  display: flex;
+  align-items: center;
+}
+
+.col-4 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card-text {
+  margin-top: 15px;
+}
+
+/* Hamburger Icon (Three Lines) */
+.hamburger-icon {
+  font-size: 30px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about-section .row {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px; /* Reduce sidebar width for smaller screens */
+  }
+
+  .sidebar-list a {
+    font-size: 16px;
+  }
+
+  .toggle-icon {
+    font-size: 25px; /* Make the toggle icon smaller on mobile */
+  }
+
+  .sidebar.open {
+    right: 0;
+  }
+
+  .app-container {
+    flex-direction: column; /* Stack the content and sidebar vertically on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 180px; /* Even narrower sidebar for very small screens */
+  }
+
+  .sidebar-list a {
+    font-size: 14px;
+  }
+}

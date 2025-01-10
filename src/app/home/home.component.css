@@ -1,0 +1,57 @@
+/* Basic animation styles */
+.animated-heading, .animated-paragraph {
+    opacity: 0;
+    transform: translateY(50px); /* Slide up from 50px below */
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .animated-heading.visible, .animated-paragraph.visible {
+    opacity: 1;
+    transform: translateY(0); /* Bring to normal position */
+  }
+  
+  /* Add some delay for staggered effect */
+  .animated-heading {
+    transition-delay: 0.5s;
+  }
+  
+  .animated-paragraph {
+    transition-delay: 1s;
+  }
+  
+  /* Fade-in animation for when elements come into view */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(300px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(50);
+    }
+  }
+  
+  /* Add a subtle animation for the text when it enters */
+  .animated-heading.animate, .animated-paragraph.animate {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  /* Jump animation: moves the text up and back to normal position */
+  @keyframes jump {
+    0% {
+      transform: translateY(0); /* Start at normal position */
+    }
+    50% {
+      transform: translateY(-10px); /* Jump up by 10px */
+    }
+    100% {
+      transform: translateY(0); /* Return to normal position */
+    }
+  }
+
+  /* Hover effect to create the jump up animation */
+  .animated-image:hover {
+    animation: jump 0.3s ease-in-out forwards;
+    opacity: 1;
+  }
+  
